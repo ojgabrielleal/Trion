@@ -52,8 +52,10 @@ body::before {
 }
 
 .trion-container{
-    width: 50rem;
+    width: 90%;
+    max-width: 50rem;
     margin: 5rem auto;
+    padding: 0 1rem;
 }
 
 .trion-container .trion-logo img{
@@ -115,5 +117,82 @@ body::before {
 @keyframes fadeInAnimation {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+/*
+* Responsividade - Tablets (768px e acima)
+*/
+@media (max-width: 768px) {
+    .trion-header .trion-bar {
+        height: 3.5rem;
+        font-size: 1rem;
+    }
+
+    .trion-container {
+        width: 90%;
+        margin: 3rem auto;
+    }
+
+    .trion-container .trion-logo {
+        width: 6rem;
+    }
+
+    .trion-container .trion-message {
+        margin-top: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .trion-container .trion-submessage {
+        margin-top: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .effect-typing-cursor {
+        height: 1rem;
+        margin-left: 6px;
+    }
+}
+
+/*
+* Responsividade - Mobile (480px e abaixo)
+*/
+@media (max-width: 480px) {
+    .trion-header .trion-bar {
+        height: 3rem;
+        font-size: 0.85rem;
+        padding-bottom: 0.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .trion-container {
+        width: 95%;
+        margin: 2rem auto;
+        padding: 0 0.5rem;
+    }
+
+    .trion-container .trion-logo {
+        width: 5rem;
+    }
+
+    .trion-container .trion-message {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        line-height: 1.2em;
+        padding: 0 1rem;
+    }
+
+    .trion-container .trion-submessage {
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        line-height: 1.4em;
+        padding: 0 1rem;
+    }
+
+    .effect-typing-cursor {
+        height: 0.9rem;
+        width: 1.5px;
+        margin-left: 4px;
+    }
 }
 
