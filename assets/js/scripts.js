@@ -39,7 +39,7 @@ $(function () {
 	setInterval(updateStatistic, 30000);
 });
 
-// Mostrar botão de ação após 4 minutos do vídeo
+// Mostrar botão de ação após 3 minutos do vídeo
 $(function () {
 	const $video = $('.trion-video video');
 	const $button = $('.trion-action-button');
