@@ -42,7 +42,7 @@ $(function () {
 // Vturber Smart Player
 var s = document.createElement("script"); s.src = "https://scripts.converteai.net/df781ff3-69a4-4131-9ca0-6d76c44e355e/players/694ad4017fac75e58d22ecfd/v4/player.js", s.async = !0, document.head.appendChild(s);
 
-// Mostrar botão de ação após 2:30 do vídeo
+// Mostrar botão de ação após 1 minuto do vídeo
 $(function () {
 	const $button = $('.trion-action-button');
 
