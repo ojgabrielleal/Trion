@@ -4,7 +4,7 @@
 	--blue-primary: rgb(7, 7, 32);
 	--white-primary: #ededed;
 	--white-secondary: #bfbfbf;
-    --white-tertiary: #ffffff;
+	--white-tertiary: #ffffff;
 	--green-primary: #1fe426;
 }
 
@@ -17,7 +17,6 @@
 }
 
 body {
-	min-height: 100vh;
 	position: relative;
 }
 
@@ -34,7 +33,7 @@ body::before {
 /* HEADER */
 .trion-header .trion-bar {
 	width: 100%;
-	min-height: 3.5rem;
+	min-height: 3rem;
 	background-color: var(--blue-primary);
 	display: flex;
 	align-items: center;
@@ -43,7 +42,7 @@ body::before {
 }
 
 .trion-bar-text {
-    padding-bottom: 0.4rem;
+	padding-bottom: 0.4rem;
 	color: var(--white-primary);
 	font-size: 1.1rem;
 	font-weight: 500;
@@ -52,19 +51,20 @@ body::before {
 
 /* CONTAINER */
 .trion-container {
-	width: 90%;
+	width: 100%;
 	max-width: 50rem;
-	margin: 4rem auto;
 	display: flex;
+	margin: 3.2rem auto;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	gap: 1rem;
+	padding: 0 1.5rem;
 }
 
 /* LOGO */
 .trion-logo {
-	width: 8rem;
+	width: 5rem;
+	margin: 0 auto;
 }
 
 .trion-logo img {
@@ -89,7 +89,6 @@ body::before {
 
 /* SUBTEXTO */
 .trion-submessage {
-	margin-top: 2rem;
 	font-size: 1.2rem;
 	font-weight: 600;
 	text-align: center;
@@ -102,7 +101,6 @@ body::before {
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-	margin-top: 1rem;
 	flex-wrap: wrap;
 }
 
@@ -132,42 +130,43 @@ body::before {
 /* VÍDEO */
 .trion-video {
 	width: 100%;
-	margin-top: 2rem;
 	position: relative;
 }
 
 /* BOTÃO CTA */
 .trion-action-button {
-    width: 100%;
-    margin-top: 2rem;
-	transform: translateX(-50%);
-	padding: 1.2rem 2.5rem;
-	font-size: 1.1rem;
+	width: 100%;
+	padding: 1rem 2rem;
+	font-size: 1rem;
 	font-weight: 700;
+	text-decoration: none;
+	text-align: center;
 	text-transform: uppercase;
 	color: var(--white-tertiary);
 	background-color: var(--green-primary);
-	border-radius: 0.6rem;
 	cursor: pointer;
-	display: none;
 	z-index: 10;
 	transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trion-action-button:hover {
-	background-color: #1ad91f;
-	transform: translateX(-50%) scale(1.05);
+	background-color: #107a13;
+	transform: scale(1.05);
 	box-shadow: 0 0 20px rgba(31, 228, 38, 0.5);
 }
 
 .trion-action-button:active {
-	transform: translateX(-50%) scale(0.97);
+	transform: scale(0.97);
 }
 
 /* ========================= */
 /* 📱 MOBILE PEQUENO */
 /* ========================= */
 @media (max-width: 479px) {
+	.trion-container {
+		margin: 2rem auto;
+	}
+
 	.trion-logo {
 		width: 5rem;
 	}
@@ -195,6 +194,10 @@ body::before {
 /* 📱 MOBILE MÉDIO */
 /* ========================= */
 @media (min-width: 480px) and (max-width: 767px) {
+	.trion-container {
+		margin: 3rem auto;
+	}
+
 	.trion-logo {
 		width: 6rem;
 	}
@@ -218,14 +221,5 @@ body::before {
 
 	.trion-submessage {
 		font-size: 1.1rem;
-	}
-}
-
-/* ========================= */
-/* 🖥 DESKTOP GRANDE */
-/* ========================= */
-@media (min-width: 1024px) {
-	.trion-container {
-		margin-top: 5rem;
 	}
 }

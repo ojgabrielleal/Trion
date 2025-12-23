@@ -42,14 +42,18 @@ $(function () {
 // Vturber Smart Player
 var s = document.createElement("script"); s.src = "https://scripts.converteai.net/df781ff3-69a4-4131-9ca0-6d76c44e355e/players/694ad4017fac75e58d22ecfd/v4/player.js", s.async = !0, document.head.appendChild(s);
 
-// Mostrar botão de ação após 1 minuto do vídeo
+// Mostrar botão de ação após 7:45 do vídeo
 $(function () {
-	const $button = $('.trion-action-button');
-
-	if (!$button.length) return;
-
-	const CTA_TIME = 1 * 60; // 1 minuto e 0 segundos
+	const CTA_TIME = (7 * 60) + 45; // 7:45
 	let shown = false;
+
+	// Cria o botão dinamicamente (mas não insere ainda)
+	const $button = $('<a>', {
+		href: 'https://go.perfectpay.com.br/PPU38CQ4UN9',
+		target: '_blank',
+		class: 'trion-action-button animate__animated animate__pulse animate__infinite',
+		text: 'Fazer adesão	'
+	}).hide();
 
 	// Aguarda o player vturb carregar
 	const checkPlayer = setInterval(function () {
@@ -59,14 +63,25 @@ $(function () {
 			if (player) {
 				clearInterval(checkPlayer);
 
+				// Insere o botão logo abaixo do vídeo
+				$('.trion-video').after($button);
+
 				// Monitora o tempo do vídeo
 				player.on('timeupdate', function (currentTime) {
 					if (currentTime >= CTA_TIME && !shown) {
 						shown = true;
-						$button.fadeIn(400); // efeito suave
+						$button.fadeIn(400);
 					}
 				});
 			}
 		}
 	}, 100);
 });
+
+// Pixel ID
+window.pixelId = "694af1a59cc59c94e3bf5cfc";
+var a = document.createElement("script");
+a.setAttribute("async", "");
+a.setAttribute("defer", "");
+a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(a);
